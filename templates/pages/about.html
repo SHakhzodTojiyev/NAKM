@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Biz haqimizda{% endblock %}
+
+{% block about %}
+
+{% load static %}
+
+ <!--Page Title-->
+ <section class="page-title centred" style="background-image: url({% static 'images/background/page-title.jpg'%});">
+    <div class="container">
+        <div class="content-box">
+            <h1>Biz haqimizda</h1>
+            <ul class="bread-crumb clearfix">
+                <li><a href={% url 'home' %}>Asosiy</a></li>
+                <li>Biz haqimizda</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+
+<!-- about-section -->
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            {% for x in biz %}
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="image-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image image-1"><img src="{{ x.img.url }}" alt="photo"></figure>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="content-box">
+                    <div class="sec-title style-two">
+                        <h5>Biz haqimizda</h5>
+                        <h1>NAVBAHOR TUMAN MAKTABGACHA TA‘LIM BO‘LIMI</h1>
+                    </div>
+                    <div class="text">
+                        <p>{{ x.biz_haqimizda }}</p>
+                    </div>
+                    <div class="btn-box"><a href={% url 'aloqa' %} class="theme-btn">Aloqa</a></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- about-section end -->
+
+{% endblock about %}

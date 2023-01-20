@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}navbahormtb.uz{% endblock %}
+
+{% block home %}
+
+{% load static %}
+
+<!-- main-slider -->
+<section class="main-slider">
+    <div class="main-slider-carousel owl-carousel owl-theme nav-style-one">
+    {% for x in asosiy_rasimlar %}
+        <div class="slide" style="background-image:url({{ x.img_1.url }})"></div>
+        {% if x.img_2 %}
+           <div class="slide" style="background-image:url({{ x.img_2.url }})"></div>
+        {% endif %}
+        {% if x.img_3 %}
+           <div class="slide" style="background-image:url({{ x.img_3.url }})"></div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</section>
+<!-- main-slider end -->
+
+
+<!-- about-section -->
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            {% for x in biz %}
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="image-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <figure class="image image-1"><img src="{{ x.img.url }}" alt="photo"></figure>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div class="content-box">
+                    <div class="sec-title style-two">
+                        <h5>Biz haqimizda</h5>
+                        <h1>NAVBAHOR TUMAN MAKTABGACHA TA‘LIM BO‘LIMI</h1>
+                    </div>
+                    <div class="text">
+                        <p>{{ x.biz_haqimizda }}</p>
+                    </div>
+                    <div class="btn-box"><a href={% url 'aloqa' %} class="theme-btn">Aloqa</a></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- about-section end -->
+
+
+<!-- news-section -->
+<section class="news-section blog-page-section">
+    <div class="container">
+        <div class="row">
+        {% for x in tadbir %}
+            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                <div class="news-block-one wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box"><a href="/tadbir/{{ x.id }}"><img src="{{ x.img_1.url }}" alt="photo"></a></figure>
+                        <div class="lower-content">
+                            <h3><a href="/tadbir/{{ x.id }}">{{ x.sarlavha}}</a></h3>
+                            <ul class="info-box">
+                                <li>{{ x.yaratilish_vaqti }}</li>
+                            </ul>
+                            <div class="text">{{ x.tavsifi|slice:"55"}}...</div>
+                            <div class="link-btn"><a href="/tadbir/{{ x.id }}"><i class="flaticon-next"></i></a></div>
+                            <div class="more-btn"><a href="/tadbir/{{ x.id }}" class="theme-btn">Batafsil</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %} 
+        </div>
+    </div>
+</section>
+<!-- news-section end -->
+
+<!-- contact-info-section -->
+<section class="contact-info-section sec-pad centred">
+    <div class="container">
+        <div class="sec-title">
+            <h5>Aloqa</h5>
+            <h1>Biz bilan bog'laning</h1>
+        </div>
+        <div class="row">
+        {% for x in aloqa %}
+            <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                <div class="single-info-box wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="flaticon-address"></i></div>
+                        <h3>Bizning manzil</h3>
+                        <div class="text">{{ x.manzil }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                <div class="single-info-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="flaticon-vintage-hand-phone"></i></div>
+                        <h3>Telfon raqam</h3>
+                        <div class="text">
+                            <a href="tel:(+55)654-545-5418">{{ x.tel }}</a><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                <div class="single-info-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="flaticon-mail"></i></div>
+                        <h3>Pochta manzil</h3>
+                        <div class="text">
+                            <a href="mailto:info@example.com">{{ x.pochta }}</a><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- contact-info-section end -->
+
+{% endblock home %}
