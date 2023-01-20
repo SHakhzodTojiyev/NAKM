@@ -1,2 +1,2 @@
-# NMTB
-NAVBAHOR TUMAN MAKTABGACHA TA‘LIM BO‘LIMI
+# NAKM
+Navbahor tuman Axborot-kutubxona markazi
