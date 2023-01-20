@@ -10,12 +10,12 @@
 <section class="main-slider">
     <div class="main-slider-carousel owl-carousel owl-theme nav-style-one">
     {% for x in asosiy_rasimlar %}
-        <div class="slide" style="background-image:url({{ x.img_1.url }})"></div>
+        <div class="slide" style="height: 100vh; background-image:url('{{ x.img_1.url }}')"></div>
         {% if x.img_2 %}
-           <div class="slide" style="background-image:url({{ x.img_2.url }})"></div>
+           <div class="slide" style="height: 100vh; background-image:url('{{ x.img_2.url }}')"></div>
         {% endif %}
         {% if x.img_3 %}
-           <div class="slide" style="background-image:url({{ x.img_3.url }})"></div>
+           <div class="slide" style="height: 100vh; background-image:url('{{ x.img_3.url }}')"></div>
         {% endif %}
     {% endfor %}
     </div>
