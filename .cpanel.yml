@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/viteacad/viteacademy.uz/
+    - /bin/cp * $DEPLOYPATH
