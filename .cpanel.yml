@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/viteacad/viteacademy.uz/
+    - export DEPLOYPATH=/home/viteacad/viteacademy.uz/NAKM
     - /bin/cp * $DEPLOYPATH
