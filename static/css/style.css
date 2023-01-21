@@ -608,7 +608,6 @@ img{
 .main-header .logo-box .logo{
   position: relative;
   display: inline-block;
-  padding: 26px 0px;
 }
 
 
@@ -804,10 +803,6 @@ width: 100%;
   margin-top: 22px;
 }
 
-.main-header .menu-area{
-  margin-right: 22px;
-}
-
 .main-menu{
   position: relative;
   display: block;
@@ -837,7 +832,7 @@ width: 100%;
   font-weight:700;
   opacity:1;
   text-transform:capitalize;
-  padding: 47px 0px 42px 0px;
+  padding: 27px 0px 22px 0px;
   transition:all 500ms ease;
   -moz-transition:all 500ms ease;
   -webkit-transition:all 500ms ease;
@@ -1038,7 +1033,6 @@ width: 100%;
 
 .sticky-header .logo-box{
   position: relative;
-  float: left;
   margin-top: 10px;
 }
 
@@ -1364,7 +1358,7 @@ width: 100%;
 .about-section .image-box{
   position: relative;
   display: block;
-  margin: 6px 30px 0px 140px;
+  margin-right: 15px;
 }
 
 .about-section .image-box .image{
@@ -3557,8 +3551,11 @@ h3 a:hover{
 }
 
 .main-header.style-two .outer-content .clearfix{
-  position: relative;
-  display: inline-block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-header.style-two .outer-content .login-box {

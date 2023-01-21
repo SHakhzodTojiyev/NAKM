@@ -5,15 +5,16 @@
     <div class="header-bottom">
         <div class="container">
             <div class="clearfix">
-                <div class="logo-box pull-left">
-                    <figure class="logo"><a href={% url 'home' %}>
-                        <img src="{% static 'images/logo.png' %}" alt="logo.png">
-                        <h1>navbahorakm</h1>
+                <div class="logo-box">
+                <figure style="display: flex; align-items: center; justify-content: center;" class="logo">
+                    <a style="text-align: center;" href={% url 'home' %}>
+                        <img width="80px" src="{% static 'images/logo.png' %}" alt="logo.png">
+                        <h1 style="text-transform: uppercase; margin-top: 5px; font-size: 30px;">Navbahor tuman Axborot-kutubxona markazi</h1>
                     </a>
                 </figure>
                 </div>
-                <div class="nav-outer pull-right clearfix">
-                    <div class="menu-area">
+                <div class="nav-outer clearfix">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center;" class="menu-area">
                         <nav class="main-menu navbar-expand-lg">
                             <div class="navbar-header">
                                 <!-- Toggle Button -->      
@@ -69,8 +70,7 @@
     <!--Sticky Header-->
     <div class="sticky-header">
         <div class="container clearfix">
-            <figure class="logo-box"><a href={% url 'home' %}><img src="{% static 'images/logo.png' %}" alt="small-logo.png" style="width:40px"></a></figure>
-            <div class="menu-area">
+            <div style="width: 100%; display: flex; align-items: center; justify-content: center;" class="menu-area">
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-header">
                         <!-- Toggle Button -->      
@@ -81,6 +81,7 @@
                         </button>
                     </div>
                     <div class="navbar-collapse collapse clearfix">
+                        <a href={% url 'home' %}><img src="{% static 'images/logo.png' %}" alt="small-logo.png" style="width:80px; margin-right: 25px;"></a>
                         <ul class="navigation clearfix">
                             <li>
                                 <a href={% url 'home' %}>Asosiy</a>
