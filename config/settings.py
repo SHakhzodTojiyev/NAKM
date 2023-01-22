@@ -120,11 +120,13 @@ USE_TZ = False
 
 STATIC_URL = 'static/'
 MEDIA_URL = "media/"
-STATICFILES_DIRS = [BASE_DIR/"static"]
-
-print(STATICFILES_DIRS)
+STATICFILES_DIRS=[str(BASE_DIR) + "/assets",]
 
 MEDIA_ROOT = BASE_DIR/"media"
+#----------------------------
+# MEDIA_ROOT = '/home/viteacad/viteacademy.uz/media'
+# STATIC_ROOT = '/home/viteacad/public_html/static' 
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
